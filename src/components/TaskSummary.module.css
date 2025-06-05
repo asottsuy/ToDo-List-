@@ -1,0 +1,17 @@
+.taskText {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.completedText {
+   color: var(--purple); 
+   font-weight: bold;
+   font-size: 14px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    max-height: 1.25rem;
+}

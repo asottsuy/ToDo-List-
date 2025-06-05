@@ -7,45 +7,11 @@
     gap: 2rem;
 }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    max-height: 1.25rem;
-}
-
 .content {
     text-align: center;
     border-top: 1px solid var(--gray-400);
     border-radius: 5px;
-    
-    display: flex;
-    align-items: center;
+    gap:0.75rem;
+    display: grid;
     justify-content: center;
-}
-
-
-
-
-
-.taskText {
-    color: var(--blue);
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.completedText {
-   color: var(--purple); 
-   font-weight: bold;
-   font-size: 14px;
-}
-
-.firstText {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: var(--gray-300);
-}
-
-.secondText {
-    color: var(--gray-300);
-    font-weight: mixed;
 }

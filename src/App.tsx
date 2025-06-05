@@ -1,7 +1,11 @@
 import {Header} from './components/Header';
 import {SearchBar} from './components/SearchBar';
+import {TaskSummary} from './components/TaskSummary';
+import { NoTaskBoard } from './components/NoTaskBoard';
+import { Task } from './components/Task';
+
+
 import './global.css';
-import clipboard from '../src/assets/Clipboard.png'
 
 import styles from './App.module.css';
 
@@ -12,18 +16,16 @@ function App() {
       <SearchBar/>
 
       <div className={styles.wrapper}>
-        <div className={styles.top}>
-          <span className={styles.taskText}>Tarefas criadas</span>
-         
-          <span className={styles.completedText}>Concluidas</span>
-        </div>
+        <TaskSummary/>
         
+        {/* <NoTaskBoard/> */}
+
         <div className={styles.content}>
-          <main>
-            <img src={clipboard}/>
-            <p className={styles.firstText}>Você ainda não tem tarefas cadastradas</p>
-            <p className={styles.secondText}>Crie tarefas e organize seus itens a fazer</p>
-          </main>
+          <Task/>
+          <Task/>
+          <Task/>
+          <Task/>
+          <Task/>
         </div>
       </div>
     </div>

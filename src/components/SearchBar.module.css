@@ -9,10 +9,17 @@
 
 .searchBar{
     background: var(--gray-500);
-    color: var(--gray-300);
+    color: var(--gray-100);
     width: 39rem;
     padding-left: 1rem;
     border-radius: 6px;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+input:focus {
+    border-color: var(--purple);
+    outline: none;
 }
 
 .createTask{
@@ -32,8 +39,4 @@
 
 * {
     border: none;
-}
-
-.plus {
-    height: 1rem;
 }

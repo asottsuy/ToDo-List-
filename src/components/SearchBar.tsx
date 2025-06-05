@@ -1,6 +1,7 @@
 import styles from './SearchBar.module.css';
 import '../global.css';
-import plus from '../assets/plus.png';
+
+import { PlusCircleIcon } from '@phosphor-icons/react';
 
 export function SearchBar(){
     return(
@@ -8,7 +9,7 @@ export function SearchBar(){
             <input className={styles.searchBar} placeholder='Adicione uma nova tarefa'></input>
             <button className={styles.createTask}>
                 Criar 
-                <img src={plus} className={styles.plus}/>
+                <PlusCircleIcon size='1rem'/>
             </button>
         </div>
     )

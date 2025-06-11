@@ -9,11 +9,19 @@
 }
 
 .taskCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
     border: 2px solid var(--blue);
     border-radius: 50%;
     width: 1.06rem;
     height: 1.06rem;
     background: transparent;
+    position: relative;
+
+    flex-shrink: 0;
 }
 
 
@@ -23,6 +31,7 @@
     line-height: 140%;
     text-align: left;
     font-weight: regular;
+    transition: 0.2s;
 }
 
 
@@ -42,11 +51,32 @@
     background-color: var(--gray-400);
 }
 
+.taskCheckbox:checked {
+    background: var(--purpleDark);
+    border-color: var(--purpleDark);
+}
+.taskCheckbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.taskCheckbox:checked + .taskText {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
 .imgContent {
-    padding: 0.5rem;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: top;
+    align-items: center;
+    gap: 1rem;
 }
 
 .taskCheckbox:hover {
